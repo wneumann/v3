@@ -7,7 +7,7 @@ You have six tasks, all dealing with the numbers of birds that visited your gard
 For comparison purposes, you always keep a copy of last week's counts nearby, which were: 0, 2, 5, 3, 7, 8 and 4. Create a vector containing last week's counts:
 
 ```clojure
-last-Week
+last-week
 ;;=> [0 2 5 3 7 8 4]
 ```
 
@@ -24,10 +24,10 @@ Implement the `today` function to return how many birds visited your garden toda
 
 ## 3. Increment today's count
 
-Implement the `inc-day-count` function to increment today's count:
+Implement the `inc-bird` function to increment today's count:
 
 ```clojure
-(inc-day-count birds-per-day)
+(inc-bird birds-per-day)
 ;;=> [2 5 0 7 4 2]
 ```
 
@@ -43,11 +43,10 @@ Implement the `day-without-birds?` predicate function that returns `true` if the
 
 ## 5. Calculate the number of visiting birds for the first number of days
 
-Implement the `first-days-count` function that returns the number of birds that have visited your garden from the start of the week, but limit the count to the specified number of days from the start of the week.
+Implement the `n-days-count` function that returns the number of birds that have visited your garden from the start of the week, but limit the count to the specified number of days from the start of the week.
 
 ```clojure
-
-(first-days-count birds-per-day 4)
+(n-days-count birds-per-day 4)
 ;;=> 14
 ```
 
@@ -59,4 +58,13 @@ Implement the `busy-days` function to return the number of busy days:
 ```clojure
 (busy-days birds-per-day)
 ;;=> 2
+```
+
+## 7. Check for odd week
+
+Over the last year, you've found that some weeks for the same, odd pattern, where the counts alternate between one and zero birds visiting. Implement the `oddWeek` function that returns `true` if the bird count pattern of this week matches the odd pattern:
+
+```clojure
+(odd-week? [1 0 1 0 1 0 1])
+;;=> true
 ```
